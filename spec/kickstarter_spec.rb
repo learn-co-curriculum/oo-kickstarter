@@ -10,7 +10,7 @@ end
 describe 'Project - ::new' do
   it 'takes a title on initialization' do
     project = Project.new("Project With So Much Amaze")
-    expect(project.name).to eq("Project With So Much Amaze")
+    expect(project.title).to eq("Project With So Much Amaze")
   end
 end
 
