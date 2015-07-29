@@ -1,7 +1,4 @@
----
-tags: oop
-languages: ruby
----
+
 
 # Object Oriented Kickstarter
 
