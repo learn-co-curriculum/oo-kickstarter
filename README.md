@@ -1,5 +1,4 @@
 
-
 # Object Oriented Kickstarter
 
 ## Description
@@ -25,10 +24,6 @@ awesome_project.backers
 
 ## Instructions
 
-The specs have been set to run in default order, and are written in such a way that
-tests for the Backer and Project classes are mixed in with one another. This is not
-how you'd normally see specs for multiple objects. For the purposes of this lab, though,
-following the specs, in order, will eventually lead you to the correct relationships
-between your classes.
+The specs have been set to run in default order, and are written in such a way that tests for the Backer and Project classes are mixed in with one another. This is not how you'd normally see specs for multiple objects. For the purposes of this lab, though, following the specs, in order, will eventually lead you to the correct relationships between your classes.
 
 Run the specs by typing `rspec` on your command line.
