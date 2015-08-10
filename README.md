@@ -61,5 +61,3 @@ if one side is updated, the other side should be as well.
 - Similarly, whenever `add_backer()` is called to update `@backers`, the backer _should also update its `@backed_projects` list_.
 
 Refer back to the Code Along about Collaborating Objects.
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/oo-kickstarter' title='Object Oriented Kickstarter'>Object Oriented Kickstarter</a> on Learn.co and start learning to code for free.</p>
