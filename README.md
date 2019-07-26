@@ -2,7 +2,7 @@
 
 ## Objectives
 
-1. Build classes that produce objects that relate to one another.
+- Build classes that produce objects that relate to one another.
 
 ## Description
 
@@ -19,18 +19,21 @@ awesome_project = Project.new("This is an Awesome Project")
 bob.back_project(awesome_project)
 
 bob.backed_projects
-# => #<Project:0x000001018683d0 @title="This is an Awesome Project"...>
+# => [#<Project:0x000001018683d0 @title="This is an Awesome Project"...>]
 
 awesome_project.backers
-# => #<Backer:0x000001018b9370 @name="Bob"...>
+# => [#<Backer:0x000001018b9370 @name="Bob"...>]
 ```
+
+The tricky thing here is that projects can have many backers and backers can
+back many projects.
 
 ## Instructions
 
 The specs have been set to run in default order, and are written in such a way
 that tests for the Backer and Project classes are mixed in with one another.
 This is not how you'd normally see specs for multiple objects. For the purposes
-of this lab, though, following the specs, in order, will eventually lead you to
+of this lab, though, following the specs in order will eventually lead you to
 the correct relationships between your classes.
 
 - When a `Backer` instance is initialized, it should be initialized with a
@@ -43,8 +46,9 @@ the correct relationships between your classes.
   should have an `attr_reader` for backers. This way, a project can report on
   who its backers are.
 
-- Once both classes have their attributes and readers set up, write a method on the Backer class called `back_project()`
-  that takes in a Project instance and adds the project to its `@backed_projects` attribute.
+- Once both classes have their attributes and readers set up, write a method on
+  the Backer class called `back_project()` that takes in a Project instance and
+  adds the project to its `@backed_projects` attribute.
 
 - Similarly, write a method on the Project class called `add_backer()` that
   takes in a Backer instance and adds the backer to its `@backers` attribute.
@@ -56,10 +60,14 @@ But... do you see the problem? Both sides of this relationship, backer and
 project, are keeping track of each other, and to maintain consistent data,
 if one side is updated, the other side should be as well.
 
-- Whenever `back_project()` is called to update `@backed_projects`, the project _should alsoupdate its `@backers` list_.
+- Whenever `back_project()` is called to update `@backed_projects`, the project
+  _should alsoupdate its `@backers` list_.
 
-- Similarly, whenever `add_backer()` is called to update `@backers`, the backer _should also update its `@backed_projects` list_.
+- Similarly, whenever `add_backer()` is called to update `@backers`, the backer
+  _should also update its `@backed_projects` list_.
 
-Refer back to the Code Along about Collaborating Objects.
+You may realize that this set up does not maintain a single source of truth. The
+trouble here is that our usual way of maintaining a "has-many" / "belongs-to"
+relationship won't work here. We'll address this is upcoming lessons, 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/oo-kickstarter' title='Object Oriented Kickstarter'>Object Oriented Kickstarter</a> on Learn.co and start learning to code for free.</p>
