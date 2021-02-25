@@ -61,7 +61,7 @@ project, are keeping track of each other, and to maintain consistent data,
 if one side is updated, the other side should be as well.
 
 - Whenever `back_project()` is called to update `@backed_projects`, the project
-  _should alsoupdate its `@backers` list_.
+  _should also update its `@backers` list_.
 
 - Similarly, whenever `add_backer()` is called to update `@backers`, the backer
   _should also update its `@backed_projects` list_.
@@ -69,5 +69,3 @@ if one side is updated, the other side should be as well.
 You may realize that this set up does not maintain a single source of truth. The
 trouble here is that our usual way of maintaining a "has-many" / "belongs-to"
 relationship won't work here. We'll address this is upcoming lessons, 
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/oo-kickstarter' title='Object Oriented Kickstarter'>Object Oriented Kickstarter</a> on Learn.co and start learning to code for free.</p>
